@@ -1,12 +1,8 @@
 <template>
-  <header>
-    <h1>{{ headermsg }}</h1>
-    <nav>
-      <ul>
-        <li>test</li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <li><router-link to="/show">Show List</router-link></li>
+    <li><router-link to="/title">Title List</router-link></li>
+  </nav>
 </template>
 
 <script>

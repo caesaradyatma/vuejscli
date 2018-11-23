@@ -1,19 +1,18 @@
 <template>
-  <div id="showdata">
-    <h1>Show Data</h1>
+  <div id="titledata">
+    <h1>Title Data</h1>
     <input type="text" v-model="search" name="search" placeholder="Search Data">
     <div v-for="data in filteredData" class="single-data">
       <p>Title: {{data.title | to-uppercase}}</p>
-      <p>Body: {{data.body}}</p>
     </div>
   </div>
 </template>
 
 <script>
-  import searchMixin from '../mixins/searchMixin';
+  import searchMixin from '../mixins/searchMixin'
 
   export default {
-    name:'showdata',
+    name:'titledata',
     data() {
       return {
         datas: [],

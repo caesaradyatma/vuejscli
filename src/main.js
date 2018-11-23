@@ -1,24 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueResource from 'vue-resource'
-
-/* import test component globally
-import Test from './Test.vue'
-
-Vue.component('test', Test);
-*/
-
-// const routes = [
-//   { path: '/footer', component: Home_footer }
-// ]
-
-// Vue.use(VueRouter);
-
-// const router = new VueRouter({
-//   routes
-// });
+import VueRouter from 'vue-router'
+import Routes from './routes'
 
 Vue.use(VueResource);
+Vue.use(VueRouter);
+
+const router = new VueRouter ({
+  routes: Routes,
+  mode: 'history'
+});
 
 Vue.filter('to-uppercase',function(value){
   return value.toUpperCase();
@@ -27,7 +19,7 @@ Vue.filter('to-uppercase',function(value){
 new Vue({
   el: '#app',
   render: h => h(App),
-
+  router: router
 });
 
 

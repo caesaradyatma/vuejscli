@@ -3,7 +3,7 @@
     <home-header></home-header>
     <h2>{{msg}}</h2>
     <formhelper></formhelper>
-    <showdata></showdata>
+    <router-view></router-view>
     <home-content></home-content>
     <home-footer></home-footer>
   </div>
@@ -16,6 +16,7 @@ import Home_footer from './components/Home_footer.vue'
 import Home_content from './components/Home_content.vue'
 import formHelper from './components/formHelper.vue'
 import showData from './components/showData.vue'
+import titleData from './components/titleData.vue'
 
 export default {
   components:{
@@ -23,7 +24,8 @@ export default {
     'home-footer'   : Home_footer,
     'home-content'  : Home_content,
     'formhelper'    : formHelper,
-    'showdata'      : showData
+    'showdata'      : showData,
+    'titledata'     : titleData
   },
   name: 'app',
   data () {
